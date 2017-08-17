@@ -1,8 +1,8 @@
 The goal of this formation is to familiarize you with scrapy, watson NLU and Sentiment analysis APIs, and Elasticsearch.
 You will be building a simple agent that scrape a site, feed some parts to watson, and store the result into Elasticsearch.
 
-Setting up the environment: Use the following command 'conda env create -f environment.yml'
-    
+Setting up the environment: setup/setup_env.bat
+
 Steps:
     Scrapy shell to develop the core of the spider
     Scrapy spider to scrape the page
