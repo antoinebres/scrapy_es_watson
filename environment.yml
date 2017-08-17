@@ -1,0 +1,57 @@
+name: scrapy_es_watson
+channels:
+- conda-forge
+- anaconda-fusion
+- defaults
+dependencies:
+- asn1crypto=0.22.0=py35_0
+- attrs=17.2.0=py35_0
+- automat=0.6.0=py35_0
+- ca-certificates=2017.7.27.1=0
+- cffi=1.10.0=py35_0
+- cryptography=1.9=py35_0
+- cssselect=1.0.0=py35_0
+- hypothesis=3.17.0=py35_0
+- idna=2.5=py35_0
+- libiconv=1.14=vc14_4
+- libxml2=2.9.4=vc14_4
+- libxslt=1.1.29=vc14_5
+- lxml=3.8.0=py35_0
+- openssl=1.0.2l=vc14_0
+- pyasn1=0.3.2=py35_0
+- pyasn1-modules=0.0.9=py35_0
+- pycparser=2.18=py35_0
+- pydispatcher=2.0.5=py35_0
+- pympler=0.5=py35_0
+- pyopenssl=16.2.0=py35_0
+- pywin32=220=py35_1
+- scrapy=1.4.0=py35_0
+- six=1.10.0=py35_1
+- vc=14=0
+- zlib=1.2.11=vc14_0
+- constantly=15.1.0=py35_0
+- hyperlink=17.1.1=py35_0
+- incremental=16.10.1=py35_0
+- parsel=1.2.0=py35_0
+- pip=9.0.1=py35_1
+- python=3.5.4=0
+- queuelib=1.4.2=py35_0
+- service_identity=17.0.0=py35_0
+- setuptools=27.2.0=py35_1
+- twisted=17.5.0=py35_0
+- vs2015_runtime=14.0.25420=0
+- w3lib=1.17.0=py35_0
+- wheel=0.29.0=py35_0
+- zope=1.0=py35_0
+- zope.interface=4.4.2=py35_0
+- pip:
+  - certifi==2017.7.27.1
+  - chardet==3.0.4
+  - elasticsearch==5.4.0
+  - pysolr==3.6.0
+  - requests==2.18.4
+  - service-identity==17.0.0
+  - urllib3==1.22
+  - watson-developer-cloud==0.26.1
+prefix: d:\Profiles\abres\AppData\Local\Continuum\Anaconda3\envs\scrapy_es_watson
+
