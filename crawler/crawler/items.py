@@ -1,14 +1,16 @@
-# -*- coding: utf-8 -*-
-
-# Define here the models for your scraped items
-#
-# See documentation in:
-# http://doc.scrapy.org/en/latest/topics/items.html
-
 import scrapy
 
 
-class CrawlerItem(scrapy.Item):
+class Article(scrapy.Item):
     # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+    title = scrapy.Field()
+    kw = scrapy.Field()
+    author = scrapy.Field()
+    description = scrapy.Field()
+    text = scrapy.Field()
+    nlu_analysis = scrapy.Field()
+    tone_analysis = scrapy.Field()
+    hash_key = scrapy.Field()
+    origin = scrapy.Field()
+    date_crawled = scrapy.Field()
+    date_published = scrapy.Field()

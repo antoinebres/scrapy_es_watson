@@ -1,6 +1,9 @@
 import re
+import datetime
+import hashlib
 import scrapy
 from w3lib.html import remove_tags, remove_tags_with_content
+from crawler.items import Article
 
 
 class figaroSpider(scrapy.Spider):
@@ -10,8 +13,8 @@ class figaroSpider(scrapy.Spider):
     ]
 
     def parse(self, response):
+        article = Article()
         # Parsing the content
-        article = {}
         # Title
         article['title'] = response.css('title::text').extract_first()
         # Keywords
@@ -28,5 +31,11 @@ class figaroSpider(scrapy.Spider):
         article['text'] = remove_tags(text)  # remove html tags
         # Date
         article['date_published'] = response.css('time[itemprop="datePublished"]::attr("datetime")').extract_first()
-
+        # Creating metadata
+        # URL domain
+        article['origin'] = response.url.split("/")[2]
+        # An id
+        article['hash_key'] = hashlib.sha256(bytes(text, 'utf-8')).hexdigest()
+        # the date of the crawl
+        article['date_crawled'] = datetime.datetime.now().strftime('%Y-%m-%dT%H:%M:%S+02:00')
         yield article

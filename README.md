@@ -1,16 +1,21 @@
-Let's create a new file named figaro_spider.py inside the crawler/crawler/spiders directory. This will be our spider.
-copy/paste the following
+Scrapy spiders can return the extracted data as Python dicts. While convenient and familiar, Python dicts lack structure: it is easy to make a typo in a field name or return inconsistent data, especially in a larger project with many spiders.
 
-import scrapy
-class figaroSpider(scrapy.Spider):
-    name = "figaro"
-    start_urls = [
-        'http://www.lefigaro.fr/conjoncture/2017/08/15/20002-20170815ARTFIG00159-le-royaume-uni-va-proposer-un-brexit-en-douceur.php'
-    ]
+Let's create a Scrapy item in items.py. Item objects are simple containers used to collect the scraped data.
+You need to create fields for each information:
+    title
+    kw
+    author
+    description
+    text
+    date_published
 
-    def parse(self, response):
-        pass
+Since we want to upload it in Elasticsearch, we will add some more fields:
+    hash_key
+    origin
+    date_crawled
 
-Then complete the parse fonction and make it return a dict with the informations we need
+We also need some field to store the data from the watson services:
+    nlu_analysis
+    tone_analysis
 
-run the following command to launch the crawl: scrapy crawl figaro
+Next, the pipelines
