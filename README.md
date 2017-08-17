@@ -1,18 +1,16 @@
-The goal of this formation is to familiarize you with scrapy, watson NLU and Sentiment analysis APIs, and Elasticsearch.
-You will be building a simple agent that scrape a site, feed some parts to watson, and store the result into Elasticsearch.
+Let's create a new file named figaro_spider.py inside the crawler/crawler/spiders directory. This will be our spider.
+copy/paste the following
 
-Setting up the environment: 
-    run setup/setup_env.bat
-    download and put the src directory at the root
+import scrapy
+class figaroSpider(scrapy.Spider):
+    name = "figaro"
+    start_urls = [
+        'http://www.lefigaro.fr/conjoncture/2017/08/15/20002-20170815ARTFIG00159-le-royaume-uni-va-proposer-un-brexit-en-douceur.php'
+    ]
 
-When the environment is set, run launch_es_and_scrapy_shell.bat
+    def parse(self, response):
+        pass
 
-Use Scrapy shell to develop the core of the spider. We need to scrape the following:
-    The title of the article
-    The keywords of the article
-    The author of the article
-    The description of the article
-    The text of the article
-    The publication date of the article
+Then complete the parse fonction and make it return a dict with the informations we need
 
-Once you know the selector to get these information, use the following command to make a scrapy project: scrapy startproject crawler
+run the following command to launch the crawl: scrapy crawl figaro
