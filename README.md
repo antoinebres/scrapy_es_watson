@@ -1,5 +1,5 @@
-Let's create a new file named figaro_spider.py inside the crawler/crawler/spiders directory. This will be our spider.
-copy/paste the following:
+Let's create a new file named _figaro_spider.py_ inside the _crawler/crawler/spiders_ directory. This will be our spider.  
+Copy/paste the following:
 
     import scrapy
     class figaroSpider(scrapy.Spider):
@@ -12,4 +12,4 @@ copy/paste the following:
             pass
 
 Then complete the parse fonction and make it return a dict with the informations we need.  
-Run the following command to launch the crawl: scrapy crawl figaro
+Run the following command to launch the crawl: _scrapy crawl figaro_
