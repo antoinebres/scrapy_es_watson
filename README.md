@@ -2,27 +2,27 @@ Scrapy spiders can return the extracted data as Python dicts. While convenient a
 
 Let's create a Scrapy item in items.py. Item objects are simple containers used to collect the scraped data.
 You need to create fields for each information:
-    title
-    kw
-    author
-    description
-    text
-    date_published
+* title
+* kw
+* author
+* description
+* text
+* date_published
 
 Since we want to upload it in Elasticsearch, we will add some more fields:
-    hash_key
-    origin
-    date_crawled
+* hash_key
+* origin
+* date_crawled
 
 We also need some field to store the data from the watson services:
-    nlu_analysis
-    tone_analysis
+* nlu_analysis
+* tone_analysis
 
 Now that our spider works, we will want to feed the informations scraped to the watson services and store the result in Elasticsearch.
 For that part we will implement pipelines. They receive an item and perform actions over it, also deciding if the item should continue or be dropped and no longer processed.
 
 We will implement 4 pipelines:
-    Validation
-    Duplicates
-    Watson
-    Elasticsearch
+* Validation
+* Duplicates
+* Watson
+* Elasticsearch
