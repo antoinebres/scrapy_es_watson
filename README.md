@@ -19,4 +19,4 @@ Use the scrapy shell to develop the core of the spider. We need to scrape the fo
 * The text of the article
 * The publication date of the article
 
-Once you know the selector to get these information, use the following command to make a scrapy project: _scrapy startproject crawler_
+Once you know the [selectors](https://doc.scrapy.org/en/1.4/topics/selectors.html) to get these information, use the following command to make a scrapy project: _scrapy startproject crawler_
