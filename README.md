@@ -2,11 +2,11 @@ To get started:
 * run _setup/setup_env.bat_
 * make a directory named _src_ at the root
 
-    src/
+        src/
 
-        elasticsearch/      # elasticsearch directory
-        
-        kibana/             # kibana directory
+            elasticsearch/      # elasticsearch directory
+
+            kibana/             # kibana directory
 
 
 When the environment is set, run _launch_scrapy_shell.bat_
