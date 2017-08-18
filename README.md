@@ -1,3 +1,4 @@
+## The spider
 Let's create a new file named _figaro_spider.py_ inside the _crawler/crawler/spiders_ directory. This will be our [spider](https://doc.scrapy.org/en/1.4/topics/spiders.html).  
 Copy/paste the following:
 
