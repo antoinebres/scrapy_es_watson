@@ -27,4 +27,5 @@ We will implement 4 pipelines:
 * Watson
 * Elasticsearch
 
-Run _cd_crawler.bat_ and paste the following command to launch the crawl: _scrapy crawl figaro_
+Run _cd_crawler.bat_ and paste the following command to launch the crawl:  
+_scrapy crawl figaro_
