@@ -18,4 +18,11 @@ We also need some field to store the data from the watson services:
     nlu_analysis
     tone_analysis
 
-Next, the pipelines
+Now that our spider works, we will want to feed the informations scraped to the watson services and store the result in Elasticsearch.
+For that part we will implement pipelines. They receive an item and perform actions over it, also deciding if the item should continue or be dropped and no longer processed.
+
+We will implement 4 pipelines:
+    Validation
+    Duplicates
+    Watson
+    Elasticsearch
