@@ -12,4 +12,4 @@ Copy/paste the following:
             pass
 
 Then complete the parse fonction and make it return a dict with the informations we need.  
-Run the following command to launch the crawl: _scrapy crawl figaro_
+Run _cd_crawler.bat_ and paste the following command to launch the crawl: _scrapy crawl figaro_
