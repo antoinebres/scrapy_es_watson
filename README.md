@@ -1,4 +1,4 @@
-To get started: 
+## Set up the environment 
 * run _setup/setup_env.bat_
 * make a directory named _src_ at the root
 
@@ -10,6 +10,8 @@ To get started:
 
 
 When the environment is set, run _launch_scrapy_shell.bat_
+
+## The core of the spider
 
 Use [selectors](https://doc.scrapy.org/en/1.4/topics/selectors.html) inside the scrapy shell to target the informations. The shell is very usefull when writing or debugging a spider. We need to scrape the following:
 * The title of the article
