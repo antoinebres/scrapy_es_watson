@@ -2,7 +2,7 @@
 if "%1" == "" GOTO start
 if "%1" == "scrapy" GOTO scrapy
 :start
-    start cmd /k launch_env scrapy
+    start cmd /k launch_scrapy_shell scrapy
     GOTO end
 :scrapy
     call activate scrapy_es_watson
