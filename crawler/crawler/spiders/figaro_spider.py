@@ -9,10 +9,17 @@ from crawler.items import Article
 class figaroSpider(scrapy.Spider):
     name = "figaro"
     start_urls = [
-        'http://www.lefigaro.fr/conjoncture/2017/08/15/20002-20170815ARTFIG00159-le-royaume-uni-va-proposer-un-brexit-en-douceur.php'
+        'http://www.lefigaro.fr/economie/'
     ]
 
     def parse(self, response):
+        # Get links
+        links = list(set(response.css('a::attr("href")').re(r'http:\/\/www\.lefigaro\.fr\/.*?\/\d+\/\d+\/\d+\/.*\.php')))
+        for link in links:
+            if link is not None:
+                yield response.follow(link, self.parse_article)
+
+    def parse_article(self, response):
         article = Article()
         # Parsing the content
         # Title
