@@ -1,6 +1,6 @@
 Scrapy spiders can return the extracted data as Python dicts. While convenient and familiar, Python dicts lack structure: it is easy to make a typo in a field name or return inconsistent data, especially in a larger project with many spiders.
 
-Let's create a Scrapy item in items.py. Item objects are simple containers used to collect the scraped data.
+Let's create a scrapy item in items.py. Item objects are simple containers used to collect the scraped data.
 You need to create fields for each information:
 * title
 * kw
@@ -26,3 +26,5 @@ We will implement 4 pipelines:
 * Duplicates
 * Watson
 * Elasticsearch
+
+Run _cd_crawler.bat_ and paste the following command to launch the crawl: _scrapy crawl figaro_
