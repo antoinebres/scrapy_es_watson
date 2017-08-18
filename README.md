@@ -1,13 +1,17 @@
-The goal of this formation is to familiarize you with scrapy, watson NLU and Sentiment analysis APIs, and Elasticsearch.  
-You will be building a simple agent that scrape a site, feed some parts to watson, and store the result into Elasticsearch.
+To get started: 
+* run _setup/setup_env.bat_
+* make a directory named _src_ at the root
 
-Setting up the environment: 
-* run setup/setup_env.bat
-* download and put the src directory at the root
+    src/
 
-When the environment is set, run _launch_es_and_scrapy_shell.bat_
+        elasticsearch/      # elasticsearch directory
+        
+        kibana/             # kibana directory
 
-Use Scrapy shell to develop the core of the spider. We need to scrape the following:
+
+When the environment is set, run _launch_scrapy_shell.bat_
+
+Use the scrapy shell to develop the core of the spider. We need to scrape the following:
 * The title of the article
 * The keywords of the article
 * The author of the article
