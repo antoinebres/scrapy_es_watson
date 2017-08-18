@@ -11,5 +11,6 @@ Copy/paste the following:
         def parse(self, response):
             pass
 
-Then complete the parse fonction and make it return a dict with the informations we need.  
-Run _cd_crawler.bat_ and paste the following command to launch the crawl: _scrapy crawl figaro_
+Then complete the parse fonction with the selectors of step 1 and make it return a dict with the informations we need.  
+Run _cd_crawler.bat_ and paste the following command to launch the crawl:  
+_scrapy crawl figaro_
