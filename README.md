@@ -1,4 +1,4 @@
-The goal of this formation is to familiarize you with scrapy.  
+The goal of this tutorial is to familiarize you with scrapy.  
 You will be building a simple agent that scrape a site, feed some parts to watson, and store the result into Elasticsearch.
 You can find the documentation for scrapy at https://doc.scrapy.org/en/1.4/index.html
 
