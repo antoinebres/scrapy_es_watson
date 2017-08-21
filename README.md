@@ -11,9 +11,9 @@ You need to create fields for each information:
 * date_published
 
 Since we want to upload it in Elasticsearch, we will add some more fields:
-* hash_key
-* origin
-* date_crawled
+* hash_key, this field will serve as an id, we will use the sha256 algorithm
+* origin, this field has not much relevance rigth now since we only scrape 'lefigaro.fr', but it can be useful later to determine the quality of the source
+* date_crawled, if we schedule the crawler to run daily on the articles of the day, we can use this field as the datetime field and not worry about any missing date
 
 We also need some field to store the data from the watson services:
 * nlu_analysis
@@ -24,10 +24,10 @@ Now that our spider works, we will want to feed the informations scraped to the 
 For that part we will implement [pipelines](https://doc.scrapy.org/en/1.4/topics/item-pipeline.html). They receive an item and perform actions over it, also deciding if the item should continue or be dropped and no longer processed.
 
 We will implement 4 pipelines:
-* Validation
-* Duplicates
-* Watson
-* Elasticsearch
+* Validation, this pipeline discards items where there is no text
+* Duplicates, this pipeline discards articles already crawled (during the current session)
+* Watson, this pipeline is where we send the data to Watson services and process the result (cf API reference for [Tone analysis](https://www.ibm.com/watson/developercloud/tone-analyzer/api/v3/?python#api_explorer) and [NLU](https://www.ibm.com/watson/developercloud/natural-language-understanding/api/v1/))
+* Elasticsearch, this pipeline index the item in elasticsearch
 
 Run _cd_crawler.bat_ and paste the following command to launch the crawl:  
 _scrapy crawl figaro_
